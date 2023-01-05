@@ -1,6 +1,7 @@
 import { json } from "d3";
 import React, { useEffect, useState } from "react";
 import { feature } from "topojson";
+import { Marks } from "./Marks";
 import { UseData } from "./UseData";
 
 const width = 960;
@@ -14,10 +15,7 @@ export const Countries = () => {
   return (
     <>
       <svg width={width} height={height}>
-        {/* <Marks
-          data={data}
-         
-        /> */}
+        <Marks data={data} />
       </svg>
     </>
   );
