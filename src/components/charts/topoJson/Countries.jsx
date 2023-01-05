@@ -1,18 +1,24 @@
 import { json } from "d3";
 import React, { useEffect, useState } from "react";
 import { feature } from "topojson";
+import { UseData } from "./UseData";
 
-const jsonUrl = "https://unpkg.com/world-atlas@2.0.2/countries-50m.json";
+const width = 960;
+const height = 500;
 
 export const Countries = () => {
-  const [data, setData] = useState(null);
-  console.log(data);
+  const data = UseData();
 
-  useEffect(() => {
-    json(jsonUrl).then((topoJsonData) => {
-        const {countries}= topoJsonData.objects
-      setData(feature(topoJsonData,countries));
-    });
-  }, []);
-  return <h1>Contries with topojson</h1>;
+  if (!data) return <pre>Loading...</pre>;
+
+  return (
+    <>
+      <svg width={width} height={height}>
+        {/* <Marks
+          data={data}
+         
+        /> */}
+      </svg>
+    </>
+  );
 };
