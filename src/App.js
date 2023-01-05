@@ -1,6 +1,7 @@
 
 import {BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
+import {WorldMap } from './components/charts/topoJson/WorldMap';
 import { Home } from './pages/Home';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         element={<Home/>}
         exact
       />
+      <Route path='/worldmap' element={<WorldMap/>}/>
      
 
       {/* no route */}

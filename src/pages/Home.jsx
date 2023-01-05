@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BarChart } from "../components/charts/BarChart";
 import { drawChart, initChart } from "../components/charts/BasicD3";
-import { Countries } from "../components/charts/topoJson/Countries";
 import { Header } from "../components/header/Header";
 
 const dataset = [
@@ -43,8 +42,6 @@ const changeData = ()=>{
       <button onClick={changeData}>Change Data</button>
       <BarChart width ={600} height={400} data={data}/>
       <hr style={{width:"100%", border:"5px solid black"}}/>
-      <h1>Contries with topojson</h1>;
-      <Countries/>
     </div>
   );
 };
