@@ -1,5 +1,5 @@
 import { json } from "d3";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { feature, mesh } from "topojson";
 
 const jsonUrl = "https://unpkg.com/world-atlas@2.0.2/countries-50m.json";
